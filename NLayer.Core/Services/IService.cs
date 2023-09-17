@@ -13,7 +13,7 @@ namespace NLayer.Core.Services
         Task<IEnumerable<T>> GetAllAsync();
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         Task<T> AddAsync(T entity);
-        Task<IEnumerable<T>> AddRange(IEnumerable<T> entities);
+        Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
         Task UpdateAsync(T entity);//veri tabanına savechangeasync ile yansıtacağım için async yaptık
         Task RemoveAsync(T entity);

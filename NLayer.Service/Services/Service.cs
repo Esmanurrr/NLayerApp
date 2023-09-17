@@ -30,7 +30,7 @@ namespace NLayer.Service.Services
             return entity;
         }
 
-        public async Task<IEnumerable<T>> AddRange(IEnumerable<T> entities)
+        public async Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities)
         {
             await _repository.AddRangeAsync(entities);
             await _unitOfWork.CommitAsync();
